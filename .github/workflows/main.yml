@@ -1,9 +1,11 @@
 name: Daily All Green Check
 
 on:
+  # Run the workflow every 3 hours (adjusted to GMT+1)
   schedule:
-    - cron: "0 12 * * *" # Runs daily at noon UTC
-  workflow_dispatch: # Allow manual runs
+    - cron: '0 */3 * * *' # Every 3 hours
+  # Allow manual triggering
+  workflow_dispatch:
 
 jobs:
   check-green:
