@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Run allGreen2025 script
-        run: node allGreen2025.js
+        run: node green-lantern.js
         env:
           USERNAME: ${{ secrets.USERNAME }}
           TOKEN: ${{ secrets.AUTH_TOKEN }}
